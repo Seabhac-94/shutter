@@ -3,23 +3,22 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from home.views import index
 
 # Create your views here.
-def index(request):
-    """Return index.html file"""
-    return render(request, 'index.html')
+
 
 @login_required
 def logout(request):
     """Log the user out"""
     auth.logout(request)
     messages.success(request, 'You have successfully been logged out.')
-    return redirect(reverse('index'))
+    return redirect(index)
 
 def login(request):
     """Return login page"""
     if request.user.is_authenticated:
-        return redirect(reverse('index'))
+        return redirect(index)
     if request.method == 'POST':
         login_form=UserLoginForm(request.POST)
 
@@ -30,7 +29,7 @@ def login(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, 'You have successfully logged in')
-                return redirect(reverse('index'))
+                return redirect(index)
             else:
                 login_form.add_error(None, 'Your username or password is incorrect')
     else:
@@ -40,7 +39,7 @@ def login(request):
 def registration(request):
     """Render the registration page"""
     if request.user.is_authenticated:
-        return redirect(reverse('index'))
+        return redirect(index)
     
     if request.method == 'POST':
         registration_form = UserRegistrationForm(request.POST)
@@ -54,7 +53,7 @@ def registration(request):
             if user:
                 auth.login(user=user, request=request)
                 messages.success(request, 'You have been successfully registered')
-                return redirect(reverse('index'))
+                return redirect(index)
             else:
                 messages.error(request, 'Unable to register account at this time')
     else:
