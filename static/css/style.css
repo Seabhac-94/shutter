@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 
+/* base.html */
+
 .navbar-brand {
     font-family: 'Chelsea Market', cursive;
     font-size: 3em;
@@ -7,4 +9,11 @@
 
 .nav-padding {
     padding: 5px;
+}
+
+
+/* profile.html */
+
+.profile-page {
+    margin-top: 3em;
 }
