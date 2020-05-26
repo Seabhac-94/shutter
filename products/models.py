@@ -17,6 +17,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     size = models.CharField(max_length=30, default='')
     image = models.ImageField(upload_to='images')
+    product_id = models.CharField(max_length=20, default='shutter#')
 
     def __str__(self):
         return self.name
