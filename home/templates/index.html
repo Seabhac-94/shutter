@@ -4,6 +4,51 @@
 
 {% block content %}
 
-Hello world
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 index-bg">
+            <div class="index-heading-wrapper">
+                <h1 class="index-hero-heading">
+                    born and bred in Ireland
+                </h1>
+                <p>
+                    shutter is a photographic experience you'll never forget.
+                </p>
+                <button class="btn btn-light" type="button">
+                   <a href="{% url 'products' %}">Shop Now</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-spacing"></div>
+
+    <div class="row justify-content-center index-section">
+        <div class="col-xs-10 col-md-8 col-lg-6 text-center">
+            <h2>
+                about us
+            </h2>
+            <p>
+                shutter offers a wide range of photographic services in Ireland from our online store, product photography, and drone footage, we are here to suit all your needs.
+                <br>
+                contact us today to see what we can do for you,
+                or browse our site and see what we have to offer.
+            </p>
+            <p> 
+                <button class="btn btn-light">
+                    <a href="#">contact us</a>
+                </button>
+                <button class="btn btn-light">
+                    <a href="#">explore</a>
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div class="section-spacing"></div>
+
+<!--Closing Page Wrapper-->    
+</div>
+<!--/Closing Page Wrapper-->   
 
 {% endblock %}

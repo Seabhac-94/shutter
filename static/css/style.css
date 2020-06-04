@@ -1,4 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+/* generic elements and classes */
+
+body {
+    background-color: #fafafa;
+    font-family: 'Architects Daughter', cursive;
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 2em;
+}
+
+button > a {
+    color: black;
+    font-size: 1.5em;
+}
+
+button > a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.section-spacing {
+    min-height: 5em;
+}
 
 /* base.html */
 
@@ -10,6 +47,27 @@
 .nav-padding {
     padding: 5px;
 }
+
+/* index.html */
+
+.index-bg {
+    background-image: url('../images/indexbg.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+}
+
+.index-heading-wrapper {
+    margin: 20vh 0 0 2vh;
+    color: #fafafa;
+}
+
+.index-section {
+    background-color: rgba(186, 191, 36, 0.5);
+    padding: 20px 0;
+}
+
 
 
 /* profile.html */
