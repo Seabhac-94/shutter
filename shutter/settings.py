@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'products',
     'cart',
     'search',
+    'checkout',
 
 ]
 
@@ -139,3 +140,6 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE")
+STRIPE_SECRET = os.getenv("STRIPE_SECRET")
