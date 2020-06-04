@@ -5,6 +5,7 @@
 body {
     background-color: #fafafa;
     font-family: 'Architects Daughter', cursive;
+    text-transform: lowercase;
 }
 
 h1 {
