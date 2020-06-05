@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block page_title %}Home{% endblock %}
 
 {% block content %}
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-12 index-bg">
+        <div class="col-12 index-bg" style="background-image:url({% static 'images/indexbg.jpeg' %});">
             <div class="index-heading-wrapper">
                 <h1 class="index-hero-heading">
                     Born and Bred in Ireland
@@ -15,7 +15,7 @@
                     Shutter is a photographic experience you'll never forget.
                 </p>
                 <button class="btn btn-light" type="button">
-                   <a href="{% url 'products' %}">shop now</a>
+                    <a href="{% url 'products' %}">shop now</a>
                 </button>
             </div>
         </div>
@@ -29,12 +29,13 @@
                 About Us
             </h2>
             <p>
-                Shutter offers a wide range of photographic services in Ireland from our online store, product photography, and drone footage, we are here to suit all your needs.
+                Shutter offers a wide range of photographic services in Ireland from our online store, product
+                photography, and drone footage, we are here to suit all your needs.
                 <br>
                 Contact us today to see what we can do for you,
                 or browse our site and see what we have to offer.
             </p>
-            <p> 
+            <p>
                 <button class="btn btn-light">
                     <a href="#">contact us</a>
                 </button>
@@ -47,8 +48,59 @@
 
     <div class="section-spacing"></div>
 
-<!--Closing Page Wrapper-->    
+    <div class="row justify-content-center align-items-center text-center">
+
+        <div class="col-11">
+            <a href="{% url 'still_life' %}">
+                <div class="index-collection-bg" style="background-image: url({% static 'images/still_lifebg.jpeg' %});">
+                    <div class="bg-overlay">
+                        <h2 class="index-collection-header">
+                            still life
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-5 index-collection-bg index-mid-collection">
+            <a href="{% url 'adventure' %}">
+                <div class="index-collection-bg" style="background-image: url({% static 'images/adventurebg.jpeg' %});">
+                    <div class="bg-overlay">
+                        <h2 class="index-collection-header">
+                            adventure
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-5 index-collection-bg index-mid-collection" >
+            <a href="{% url 'nature' %}">
+                <div class="index-collection-bg" style="background-image: url({% static 'images/naturebg.jpeg' %});">
+                    <div class="bg-overlay">
+                        <h2 class="index-collection-header">
+                            nature
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-11 index-collection-bg">
+            <a href="{% url 'irish' %}">
+                <div class="index-collection-bg" style="background-image: url({% static 'images/irelandbg.jpeg' %});">
+                    <div class="bg-overlay">
+                        <h2 class="index-collection-header">
+                            ireland
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!--Closing Page Wrapper-->
 </div>
-<!--/Closing Page Wrapper-->   
+<!--/Closing Page Wrapper-->
 
 {% endblock %}

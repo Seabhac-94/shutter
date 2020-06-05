@@ -34,6 +34,10 @@ button > a:hover {
     color: black;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .section-spacing {
     min-height: 5em;
 }
@@ -52,7 +56,6 @@ button > a:hover {
 /* index.html */
 
 .index-bg {
-    background-image: url('../images/indexbg.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -69,6 +72,32 @@ button > a:hover {
     padding: 20px 0;
 }
 
+.index-collection-bg {
+    min-height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1em 0;
+}
+
+.index-mid-collection {
+    margin: 1em;
+}
+
+.bg-overlay {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8) ;
+    height: 50vh;
+}
+
+.index-collection-header {
+    padding-top: 3em;
+    color: rgb(43, 43, 43);
+}
+
+div:hover > .bg-overlay{
+    display: block;
+}
 
 
 /* profile.html */
