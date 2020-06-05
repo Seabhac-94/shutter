@@ -23,8 +23,21 @@ class Product(models.Model):
         (Landscape, 'Landscape'),
         (Portrait, 'Portrait')
     )
+    Irishness = 'Irishness'
+    Nature = 'Nature'
+    Still_Life = 'Still Life'
+    Adventure = 'Adventure'
+
+    PRODUCT_TYPE = (
+        (Still_Life, 'Still Life'),
+        (Adventure, 'Adventure'),
+        (Nature, 'Nature'),
+        (Irishness, 'Irishness')
+    )
     name = models.CharField(max_length=254, default='')
+    author = models.CharField(max_length=30, default='')
     description = models.TextField()
+    photo_type = models.CharField(max_length=100, choices=PRODUCT_TYPE, default=Still_Life)
     available_in = models.CharField(max_length=20, choices=AVAILABLE_IN, default=Gloss)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     size = models.CharField(max_length=30, default='')
