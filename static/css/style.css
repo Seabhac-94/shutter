@@ -45,12 +45,15 @@ a:hover {
 /* base.html */
 
 .navbar-brand {
-    font-family: 'Chelsea Market', cursive;
     font-size: 3em;
 }
 
 .nav-padding {
     padding: 5px;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
 }
 
 /* index.html */
