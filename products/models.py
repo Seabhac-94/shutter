@@ -45,6 +45,9 @@ class Product(models.Model):
     port_or_land = models.CharField(max_length=100, choices=SIZE_TYPE, default=Portrait)
     product_id = models.CharField(max_length=20, default='shutter#')
 
+    class Meta:
+        ordering = ['photo_type']
+
     def __str__(self):
         return self.name
     

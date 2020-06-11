@@ -56,6 +56,15 @@ a:hover {
     border-radius: 10px;
 }
 
+.navbar {
+    font-size: 1.25em;
+}
+
+.btn-outline-success {
+    border-color: rgba(186, 191, 36);
+    color: rgba(186, 191, 36);
+}
+
 /* index.html */
 
 .index-bg {
@@ -102,9 +111,38 @@ div:hover > .bg-overlay{
     display: block;
 }
 
+/* product.html */
+
+.product-title {
+    font-size: 2.5em;
+    margin-top: 1em
+}
+
+.product-para {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.product-wrap {
+    margin: 1em;
+    padding: 0.5em 0;
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.btn-success {
+    background-color: rgb(186, 191, 36);
+    border-color: rgb(186, 191, 36);
+}
+
+
 
 /* profile.html */
 
 .profile-page {
     margin-top: 3em;
 }
+
+
+/* media queries */

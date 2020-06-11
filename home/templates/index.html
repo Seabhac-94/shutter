@@ -24,7 +24,7 @@
     <div class="section-spacing"></div>
 
     <div class="row justify-content-center index-section">
-        <div class="col-xs-10 col-md-8 col-lg-6 text-center">
+        <div class="col-10 col-xl-8 text-center">
             <h2>
                 About Us
             </h2>
@@ -40,7 +40,7 @@
                     <a href="#">contact us</a>
                 </button>
                 <button class="btn btn-light">
-                    <a href="#">explore</a>
+                    <a href="{% url 'products' %}">explore</a>
                 </button>
             </p>
         </div>
@@ -50,7 +50,7 @@
 
     <div class="row justify-content-center align-items-center text-center">
 
-        <div class="col-11">
+        <div class="col-12 col-md-11">
             <a href="{% url 'still_life' %}">
                 <div class="index-collection-bg" style="background-image: url({% static 'images/still_lifebg.jpeg' %});">
                     <div class="bg-overlay">
@@ -62,7 +62,7 @@
             </a>
         </div>
 
-        <div class="col-5 index-collection-bg index-mid-collection">
+        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection">
             <a href="{% url 'adventure' %}">
                 <div class="index-collection-bg" style="background-image: url({% static 'images/adventurebg.jpeg' %});">
                     <div class="bg-overlay">
@@ -73,7 +73,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-5 index-collection-bg index-mid-collection" >
+        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection" >
             <a href="{% url 'nature' %}">
                 <div class="index-collection-bg" style="background-image: url({% static 'images/naturebg.jpeg' %});">
                     <div class="bg-overlay">
@@ -84,7 +84,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-11 index-collection-bg">
+        <div class="col-12 col-md-11 index-collection-bg">
             <a href="{% url 'irish' %}">
                 <div class="index-collection-bg" style="background-image: url({% static 'images/irelandbg.jpeg' %});">
                     <div class="bg-overlay">
