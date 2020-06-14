@@ -5,7 +5,7 @@
 body {
     background-color: #fcfcfc;
     font-family: 'Architects Daughter', cursive;
-    text-transform: lowercase;
+    text-transform: lowercase !important;
 }
 
 h1 {
@@ -134,6 +134,25 @@ div:hover > .bg-overlay{
 .btn-success {
     background-color: rgb(186, 191, 36);
     border-color: rgb(186, 191, 36);
+}
+
+/* cart.html */
+
+.quantity-control {
+    font-size: 1.5em;
+}
+
+.cart-wrap {
+    padding: 0.5em;
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+/* checkout.html */
+
+legend {
+    font-size: 2em;
 }
 
 /* profile.html */
