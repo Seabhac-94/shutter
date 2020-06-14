@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load bootstrap_tags %}
+
+{% block page_title %} Apply {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <form method="POST" action="{% url 'apply' %}">
+        <div class="row">
+            <div class="form-group col-md-6">
+                {% csrf_token %}
+                {{ application_form|as_bootstrap }}
+            </div>
+                <div class="form-group col-md-12">
+                <input class="btn btn-success" id="submit_application" name="commit" type="submit" value="Apply">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
