@@ -18,6 +18,7 @@ class Application(models.Model):
     name = models.CharField(max_length=50, default='', blank=False)
     email = models.CharField(max_length=100, default='', blank=False)
     phone_number = models.CharField(max_length=15, default='')
+    job_your_applying_for = models.CharField(max_length=50, default='')
     years_experience = models.IntegerField(blank=False)
     work_experience = models.TextField(blank=False)
     about_you = models.TextField(blank=False)

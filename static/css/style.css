@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* generic elements and classes */
 
 body {
@@ -63,6 +64,12 @@ a:hover {
 .btn-outline-success {
     border-color: rgba(186, 191, 36);
     color: rgba(186, 191, 36);
+}
+
+.messages {
+    font-size: 1.5em;
+    padding: 2em;
+    background-color: rgba(186, 191, 36, 0.3);
 }
 
 /* index.html */
@@ -157,10 +164,37 @@ legend {
 
 /* careers.html */
 
+.careers-bg {
+    background-color: rgba(186, 191, 36, 0.25);
+    
+}
+
 .job-openings {
+    font-family: 'Roboto', sans-serif;
     text-transform: none;
     text-align: center;
 }
+
+.careers-heading {
+    font-weight: 400;
+}
+
+.careers-para {
+    font-weight: 300;
+}
+
+/* application.html */
+
+.application {
+    font-family: 'Roboto', sans-serif;
+    text-transform: none;
+}
+
+.application-para {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
 
 /* profile.html */
 

@@ -6,19 +6,34 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <form method="POST" action="{% url 'apply' %}">
-        <div class="row">
-            <div class="form-group col-md-6">
-                {% csrf_token %}
-                {{ application_form|as_bootstrap }}
-            </div>
-                <div class="form-group col-md-12">
-                <input class="btn btn-success" id="submit_application" name="commit" type="submit" value="Apply">
+<div class="careers-bg application">
+    <div class="section-spacing"></div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+                <h3 class="careers-heading">
+                    Application Process
+                </h3>
+                <p class="application-para">
+                    Thanks for taking the time to come and apply. Our hiring process is a little different, in that we don't ask you for your CV at this stage. We just want to hear from you, about you.
+                    <br>
+                    In the form below, fill out the information required, and a little bit about your work experience. The most important thing, is the "About you" section. We want the person we hire to have the same values as us, this is your chance to tell us all about you!
+                </p>
             </div>
         </div>
-    </form>
-</div>
 
+        <form method="POST" action="{% url 'apply' %}">
+            <div class="row justify-content-center">
+                <div class="form-group col-12 col-md-10 col-lg-8 col-xl-6">
+                    {% csrf_token %}
+                    {{ application_form|as_bootstrap }}
+                </div>
+                <div class="form-group col-md-12 text-center">
+                    <input class="btn btn-success" id="submit_application" name="commit" type="submit" value="Apply">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
