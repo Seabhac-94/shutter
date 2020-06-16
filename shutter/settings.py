@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'search',
     'checkout',
     'careers',
+    'about',
 
 ]
 

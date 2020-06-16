@@ -205,6 +205,16 @@ legend {
     font-weight: 300;
 }
 
+/* about.html */
+
+.about-us-bg {
+    background-color: rgba(186, 191, 36, 0.25);
+}
+
+.about-us-image {
+    border-radius: 100%;
+}
+
 
 /* profile.html */
 
@@ -214,3 +224,11 @@ legend {
 
 /* media queries */
 
+@media (max-width: 793px) {
+    .about-us-para {
+        padding: 2em;
+        background-color: #fafafa;
+        border: solid 1px black;
+        border-radius: 15px;
+    }
+}
