@@ -39,6 +39,17 @@
                             <a class="dropdown-item nav-padding" href="{% url 'irish' %}">irish</a>                      
                         </div>
                     </li>
+                    <!--Dropdown for About-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            about
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">        
+                            <a class="dropdown-item nav-padding" href="#">about us</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'careers' %}">careers</a>                      
+                        </div>
+                    </li>
                     <!--Dropdown for account-->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -57,9 +68,9 @@
                     </li>
                     <!--cart-->
                     <li class="nav-padding">
-                        <a href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> View Cart
+                        <a class="nav-cart" href="{% url 'view_cart' %}"><i class="fas fa-shopping-cart"></i> View Cart
                             {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
+                            <label class="badge badge-success">{{ product_count }}</label>
                             {% endif %}
                         </a>
                     </li>

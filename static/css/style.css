@@ -49,6 +49,10 @@ a:hover {
     font-size: 3em;
 }
 
+.nav-cart {
+    color:rgba(0,0,0,.5)
+}
+
 .nav-padding {
     padding: 5px;
 }
@@ -64,6 +68,12 @@ a:hover {
 .btn-outline-success {
     border-color: rgba(186, 191, 36);
     color: rgba(186, 191, 36);
+}
+
+.badge-success {
+    background-color: rgb(186, 191, 36);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .messages {
