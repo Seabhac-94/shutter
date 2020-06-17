@@ -5,22 +5,26 @@
 {% block page_title %} Register {% endblock %}
 
 {% block content %}
-
-<div class="container-fluid">
-    <div class="row justify-content-center my-5">
-        <div class="col-12">
-        </div>
-        <div class="col-xs-10 col-md-8 col-lg-6">
-            <form action="" method="POST">
-                {% csrf_token %}
-                {{ registration_form | as_bootstrap}}
-                <button class="btn btn-secondary" type="submit">Register</button>
-            </form>
-
-            <p>If you already have an account you can <a href="{% url 'login' %}">Sign In</a></p>
+<div class="accounts-bg">
+    <div class="container-fluid">
+        <div class="row justify-content-center py-5">
+            <div class="col-12">
+            </div>
+            <div class="col-xs-10 col-md-8 col-xl-6">
+                <h3>
+                    register
+                </h3>
+                <p>
+                    we just need a few small details from you before you can checkout, register below and get shopping! 
+                </p>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ registration_form | as_bootstrap}}
+                    <button class="btn btn-success" type="submit">Register</button>
+                </form>
+                <p class="help-block mt-3">If you already have an account you can <a href="{% url 'login' %}">Sign In</a></p>
+            </div>
         </div>
     </div>
 </div>
-
-
 {% endblock %}

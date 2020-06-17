@@ -5,43 +5,61 @@
 {% block page_title %} Cart {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <h3 class="my-4">
-        Your Order
-    </h3>
-    <div class="row">
-        {% for item in cart_items %}
-        <div class="col-12 my-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-12 col-lg-2">
-                    <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="productimage" width="100%">
-                </div>
-                <div class="col-12 col-lg-3">
-                    <p>{{ item.product.name }}</p>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <p>€{{ item.product.price }}</p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="mx-1 quantity-control">quantity</div>
-                                <input name="quantity" type="number" min="0" max="50" class="form-control" value="{{item.quantity}}">
+
+<div class="cart-bg">
+    <div class="container-fluid">
+        <h3 class="my-4">
+            your cart
+        </h3>
+        {% if total > 0 %}
+        <div class="row">
+            {% for item in cart_items %}
+            <div class="col-12 my-5">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-lg-2">
+                        <img src="{{ MEDIA_URL }}{{ item.product.image }}" alt="productimage" width="100%">
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <p>{{ item.product.name }}</p>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <p>€{{ item.product.price }}</p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="mx-1 quantity-control">quantity</div>
+                                    <input name="quantity" type="number" min="0" max="50" class="form-control"
+                                        value="{{item.quantity}}">
+                                </div>
                             </div>
-                        </div>
-                            <button class="btn btn-success input-group-btn mx-1" type="submit">amend</button>                   
-                    </form>
+                            <button class="btn btn-success input-group-btn mx-1" type="submit">amend</button>
+                        </form>
+                    </div>
                 </div>
-            </div>       
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div> 
         <div class="my-4">
             <p>Total</p>
             <p>€{{ total }}</p>
-            <a href="{% url 'checkout' %}" class="btn btn-success" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-        </div>      
+            <a href="{% url 'checkout' %}" class="btn btn-success" role="button">Checkout</a>
+        </div>
+        {% else %}
+        <div class="row">
+            <div class="col-11 col-md-8 col-xl-6">
+                <p>
+                    you don't have any items in your cart at the moment, don't worry! we've got you covered.. have a look
+                    at our products and see what we've got!
+                </p>
+                <button class="btn btn-success">
+                    <a href="{% url 'products' %}">shop now</a>
+                </button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}

@@ -2,50 +2,59 @@
 {% block page_title %} Products {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        {% for product in products %}
-        <div class="col-12 col-lg-10 my-2 my-lg-4 text-center">
-            {% if product.port_or_land == 'Landscape' %}
-            <img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" alt="productimage" width="100%">
-            {% else %}
-            <img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" alt="productimage" width="80%">
-            {% endif %}
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h3 class="product-title">{{ product.name }}</h3>
-                </div>
-                <div class="col-11 col-md-5 product-wrap">
-                    <p class="product-para">author: {{ product.author }}</p>
-                    <p class="product-para">available in: {{ product.available_in }}</p>
-                    <p class="product-para">dimensions: {{ product.size }}</p>
-                    <p class="product-para">rotation: {{ product.port_or_land }}</p>
-                    <p class="product-para">price: €{{ product.price }}</p>
-                </div>
-                <div class="col-11 col-md-5 product-wrap">
-                    <p class="product-para ">
-                        description
-                    </p>
-                    <p class="product-para">"{{ product.description }}"</p>
-                </div>
-            </div>
-            <div class="row justify-content-center my-2">
-                <div class="col-5 col-xl-3 text-center">
-                    <form method="POST" action="{% url 'add_to_cart' product.id %}">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            <input type="number" name="quantity" min="1" max="10" class="form-control"
-                                placeholder="Quantity" value="1">
-                            <span class="input-group-btn mx-1">
-                                <button class="btn btn-success" type="submit">add to cart</button>
-                            </span>
-                        </div>
-                    </form>
-                </div>
+<div class="products-bg">
+    <div class="container-fluid">
+        <div class="row justify-content-center my-5">
+            <div class="col-11">
+                <h3>
+                    products
+                </h3>
             </div>
         </div>
-        
-        {% endfor %}
+        <div class="row justify-content-center">
+            {% for product in products %}
+            <div class="col-12 col-lg-10 my-2 my-lg-4 text-center">
+                {% if product.port_or_land == 'Landscape' %}
+                <img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" alt="productimage" width="100%">
+                {% else %}
+                <img id="product-image" src="{{ MEDIA_URL }}{{ product.image }}" alt="productimage" width="80%">
+                {% endif %}
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h3 class="product-title">{{ product.name }}</h3>
+                    </div>
+                    <div class="col-11 col-md-5 product-wrap">
+                        <p class="product-para">author: {{ product.author }}</p>
+                        <p class="product-para">available in: {{ product.available_in }}</p>
+                        <p class="product-para">dimensions: {{ product.size }}</p>
+                        <p class="product-para">rotation: {{ product.port_or_land }}</p>
+                        <p class="product-para">price: €{{ product.price }}</p>
+                    </div>
+                    <div class="col-11 col-md-5 product-wrap">
+                        <p class="product-para ">
+                            description
+                        </p>
+                        <p class="product-para">"{{ product.description }}"</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center my-2">
+                    <div class="col-5 col-xl-3 text-center">
+                        <form method="POST" action="{% url 'add_to_cart' product.id %}">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <input type="number" name="quantity" min="1" max="10" class="form-control"
+                                    placeholder="Quantity" value="1">
+                                <span class="input-group-btn mx-1">
+                                    <button class="btn btn-success" type="submit">add to cart</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
     </div>
 </div>
 

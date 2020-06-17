@@ -31,12 +31,12 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             shop
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item nav-padding" href="{% url 'products' %}">all products</a>
-                            <a class="dropdown-item nav-padding" href="{% url 'adventure' %}">adventure</a> 
-                            <a class="dropdown-item nav-padding" href="{% url 'still_life' %}">still life</a>   
+                            <a class="dropdown-item nav-padding" href="{% url 'adventure' %}">adventure</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'still_life' %}">still life</a>
                             <a class="dropdown-item nav-padding" href="{% url 'nature' %}">nature</a>
-                            <a class="dropdown-item nav-padding" href="{% url 'irish' %}">irish</a>                      
+                            <a class="dropdown-item nav-padding" href="{% url 'irish' %}">irish</a>
                         </div>
                     </li>
                     <!--Dropdown for About-->
@@ -45,9 +45,9 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             about
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item nav-padding" href="{% url 'about' %}">about us</a>
-                            <a class="dropdown-item nav-padding" href="{% url 'careers' %}">careers</a>                      
+                            <a class="dropdown-item nav-padding" href="{% url 'careers' %}">careers</a>
                         </div>
                     </li>
                     <!--Dropdown for account-->
@@ -58,11 +58,15 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% if user.is_authenticated %}
-                            <a class="dropdown-item nav-padding" href="{% url 'profile' %}"><i class="fas fa-user"></i> Profile</a>
-                            <a class="dropdown-item nav-padding" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'profile' %}"><i class="fas fa-user"></i>
+                                Profile</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'logout' %}"><i
+                                    class="fas fa-sign-out-alt"></i> Log Out</a>
                             {% else %}
-                            <a class="dropdown-item nav-padding" href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a>
-                            <a class="dropdown-item nav-padding" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Log In</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'register' %}"><i
+                                    class="fa fa-user-plus"></i> Register</a>
+                            <a class="dropdown-item nav-padding" href="{% url 'login' %}"><i
+                                    class="fas fa-sign-in-alt"></i> Log In</a>
                             {% endif %}
                         </div>
                     </li>
@@ -95,6 +99,21 @@
     <!--Page Content-->
     {% block content %}
     {% endblock %}
+
+    <footer class="footer-bg py-3">
+        <div class="container text-center">
+            <p>
+                <strong>©opyright Shutter 2020</strong>
+            </p>
+            <p class="no-word-wrap">this web app was designed and created by
+                <br>
+                <a href="https://github.com/Seabhac-94" target="_blank">zac allen</a>
+            </p>
+
+        </div>
+
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>

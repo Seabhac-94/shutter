@@ -3,7 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* generic elements and classes */
 
+html {
+    height: 100%;
+}
 body {
+    height: 100%;
     background-color: #fcfcfc;
     font-family: 'Architects Daughter', cursive;
     text-transform: lowercase !important;
@@ -53,6 +57,10 @@ a:hover {
     color:rgba(0,0,0,.5)
 }
 
+a:hover.nav-cart {
+    color: rgba(0, 0, 0, 0.6);
+}
+
 .nav-padding {
     padding: 5px;
 }
@@ -80,6 +88,25 @@ a:hover {
     font-size: 1.5em;
     padding: 2em;
     background-color: rgba(186, 191, 36, 0.3);
+}
+
+.footer-bg {
+    background-color: rgba(186, 191, 36, 0.5);
+}
+
+footer > div > p > a {
+    background-color: #fafafa;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none
+}
+
+footer > div > p > a:hover {
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, 0.75);
+    border: #fafafa;
 }
 
 /* index.html */
@@ -128,7 +155,22 @@ div:hover > .bg-overlay{
     display: block;
 }
 
+/* registration/login.html */
+
+p.help-block {
+    font-size: 1em;
+}
+
+.accounts-bg {
+    background-color: rgba(186, 191, 36, 0.25);
+    min-height: 90%;
+}
+
 /* product.html */
+
+.products-bg {
+    min-height: 90%;
+}
 
 .product-title {
     font-size: 2.5em;
@@ -155,6 +197,10 @@ div:hover > .bg-overlay{
 
 /* cart.html */
 
+.cart-bg {
+    min-height: 80%;
+}
+
 .quantity-control {
     font-size: 1.5em;
 }
@@ -176,6 +222,7 @@ legend {
 
 .careers-bg {
     background-color: rgba(186, 191, 36, 0.25);
+    min-height: 90%;
     
 }
 
@@ -230,5 +277,28 @@ legend {
         background-color: #fafafa;
         border: solid 1px black;
         border-radius: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .index-bg {
+        background-position: left;
+    }
+}
+
+@media (max-width: 500px) {
+    .index-heading-wrapper {
+        margin: 5em 0 0 0;
+        color: #fafafa;
+    }
+}
+
+@media (max-width: 425px) {
+    .index-collection-bg {
+        min-height: 20em;
+    }
+        
+    .bg-overlay {
+        height: 20em;
     }
 }
