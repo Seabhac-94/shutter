@@ -85,6 +85,18 @@ Initial problems - Forms were not being sent to django-admin. On inspection, met
 4. Follow steps for "Deploy using Heroku Git" (push from CLI, described below)
 5. Set Config vars (described below)
 
+#### Creating a databse on Heroku
+1. Heroku > Resources > New add on
+2. type postgres and select Heroku Postgres
+3. take url from config
+4. env
+5. 
+
+ISSUES
+<br>
+issue - a previous migration in products was throwing an error for maximum value allowed, this was fixed by destroying old migrations, this then threw a django error for django.migrations module not being available, django was reinstalled, migrations worked on local server, however on the Postgres, it was still throwing an error, the old Postgres databse was deleted and a new one installed, after this the issue was fixed.
+
+
 ##### Push to Heroku
 1. First, ensure requirements.txt and Procfile are configured.
 2. In temrinal window, run "heroku login"
