@@ -271,6 +271,12 @@ legend {
 
 /* media queries */
 
+@media (max-width: 991px) {
+    .nav-padding {
+        padding: 5px 0;
+    }
+}
+
 @media (max-width: 793px) {
     .about-us-para {
         padding: 2em;
@@ -286,14 +292,38 @@ legend {
     }
 }
 
+@media (max-width: 575px) {
+    input.form-control.search-form-input {
+        width: 70%;
+    }
+}
+
 @media (max-width: 500px) {
     .index-heading-wrapper {
         margin: 5em 0 0 0;
-        color: #fafafa;
     }
 }
 
 @media (max-width: 425px) {
+
+    h1 {
+        font-size: 3.5em;
+    }
+    
+    h2 {
+        font-size: 3em;
+    }
+    
+    h3 {
+        font-size: 2.5em;
+    }
+    
+    p {
+        font-size: 1.5em;
+    }
+
+
+
     .index-collection-bg {
         min-height: 20em;
     }
