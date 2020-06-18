@@ -7,12 +7,13 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-12 index-bg" style="background-image:url({% static 'images/indexbg.jpeg' %});">
-            <div class="index-heading-wrapper">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-6 index-heading-wrapper">
                 <h1 class="index-hero-heading">
                     Born and Bred in Ireland
                 </h1>
                 <p>
-                    Shutter is a photographic experience you'll never forget.
+                    Shutter is a homegrown irish company that specialises in landscaping, nature and still life
+                    photography.
                 </p>
                 <button class="btn btn-light" type="button">
                     <a href="{% url 'products' %}">shop now</a>
@@ -29,8 +30,8 @@
                 About Us
             </h2>
             <p>
-                Shutter offers a wide range of photographic services in Ireland from our online store, product
-                photography, and drone footage, we are here to suit all your needs.
+                Shutter offers a wide range of photographic services in Ireland. from our online store, product
+                photography and drone footage, we are here to suit all your needs.
                 <br>
                 Contact us today to see what we can do for you,
                 or browse our site and see what we have to offer.
@@ -55,11 +56,12 @@
                 <div class="">
                     <h2 class="">
                         still life
-                    </h2>                   
+                    </h2>
                 </div>
             </div>
             <a href="{% url 'still_life' %}">
-                <div class="index-collection-bg" style="background-image: url({% static 'images/still_lifebg.jpeg' %});">
+                <div class="index-collection-bg"
+                    style="background-image: url({% static 'images/still_lifebg.jpeg' %});">
                     <div class="bg-overlay">
                         <h2 class="index-collection-header">
                             still life
@@ -74,7 +76,7 @@
                 <div class="">
                     <h2 class="">
                         adventure
-                    </h2>                   
+                    </h2>
                 </div>
             </div>
             <a href="{% url 'adventure' %}">
@@ -87,12 +89,12 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection" >
+        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection">
             <div class="index-mobile-header d-block d-xl-none">
                 <div class="">
                     <h2 class="">
                         nature
-                    </h2>                   
+                    </h2>
                 </div>
             </div>
             <a href="{% url 'nature' %}">
@@ -110,7 +112,7 @@
                 <div class="">
                     <h2 class="">
                         ireland
-                    </h2>                   
+                    </h2>
                 </div>
             </div>
             <a href="{% url 'irish' %}">
