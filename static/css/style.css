@@ -267,7 +267,9 @@ legend {
 /* profile.html */
 
 .profile-page {
-    margin-top: 3em;
+    margin: 3em 0;
+    min-height: 90%;
+
 }
 
 /* media queries */
