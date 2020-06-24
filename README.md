@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Seabhac-94/shutter.svg?branch=master)](https://travis-ci.org/Seabhac-94/shutter)
+
 # Shutter
 
 ## Description
