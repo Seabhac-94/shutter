@@ -145,12 +145,24 @@ postgres db, that interfered with the current migrations.
 4. Open app and refresh, the static images/css should load.
 5. On AWS - the static files and folders will be available.
 
+#### Travis CI
+1. Open travis, select project from Github
+2. In project, set up travis.yml
+3. Take link from 'markdown' in travis and paste it into README.md
+4. Build should begin.
+
+##### Issues
+
+1. Module not found 'env'
+ - commented out import env file as it is not used once app is on web
+2. Module not found 'storages'
+- Checked the INSTALLED_APPS, storages was present, so pip3 install django-storages was run, ensuring it was inside the virtualenv, requirements.txt updated. Build now passed.
+
 #### Push to Heroku
 1. First, ensure requirements.txt and Procfile are configured.
-2. In terminal window, run "heroku login"
-3. Press and key to be redirected to Heroku Login page, select "Login in to Heroku CLI"
-4. Return back to Terminal, Heroku ushould be logged in, run the command "git push heroku master".
-5. Once successfully completed, " https://APPNAME.herokuapp.com/ deployed to Heroku" will be available in terminal
+2. In Heroku, in Deploy tab, select your app to deploy from Github.
+3. Add shutter-ecommerce.herokuapp.com/ to ALLOWED_HOSTS
+4. Once successfully completed, "https://shutter-ecommerce.herokuapp.com/" deployed to Heroku" will be available in terminal
 window, you can follow this link to view your application.
 
 ##### Set config vars on Heroku
