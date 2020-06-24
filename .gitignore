@@ -4,3 +4,8 @@
 venv/
 .vscode/
 env.py
+new_user_credentials.csv
+*.png
+*.jpeg
+static/
+media/
