@@ -6,6 +6,15 @@
 Shutter is an Irish company website and e-commerce store. It allows users to purchase products off of the online store,
 as well as view and apply for job vacancies in the company.
 
+### Using the site
+
+1. Create Account
+2. Navigate to products, add product to cart
+3. When in checkout use the following card details to simulate purchase:
+- Card Number : 4242424242424242  Exp: 01/2021 CCV: 100
+4. Navigate to careers section - click apply
+5. Fill out form to apply for position 
+
 ## UX
 
 #### Design Considerations
@@ -66,6 +75,9 @@ Initial problems, tables were not showing in django-admin. Problem - model wasn'
 
 ##### Add to cart
 Initial problems, thorwing int() error when adding to cart. Problem - method on form wasn't set to POST.
+
+##### Checkout
+No issues initally - the stripe test card was used to simulate payment.
 
 ##### Careers App
 Initial problems - Forms were not being sent to django-admin. On inspection, method and action were not defined in the
@@ -204,7 +216,7 @@ window, you can follow this link to view your application.
 
 ##### Final steps
 
-1. Debug
+1. Set Debug = False in settings.py
 
 ## Credits
 

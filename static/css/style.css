@@ -180,6 +180,7 @@ p.help-block {
 .product-para {
     font-size: 1.5em;
     margin: 0;
+    padding: 0 0.5px;
 }
 
 .product-wrap {
