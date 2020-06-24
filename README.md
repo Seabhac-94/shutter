@@ -93,8 +93,6 @@ the size bar were selcted, i.e; Mobile S/M/L, Tablet, Laptop & Laptop L.
 2. For each device, the site was checked to enure there was no overlap of information and that the presentation looked
 well.
 <br>
-<img src="{% static 'images/iphone6s.png' %}">
-
 
 #
 
