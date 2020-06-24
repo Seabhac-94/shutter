@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 /* generic elements and classes */
 
 html {
@@ -224,7 +225,6 @@ legend {
 .careers-bg {
     background-color: rgba(186, 191, 36, 0.25);
     min-height: 90%;
-    
 }
 
 .job-openings {
@@ -264,13 +264,11 @@ legend {
     border-radius: 100%;
 }
 
-
 /* profile.html */
 
 .profile-page {
     margin: 3em 0;
     min-height: 90%;
-
 }
 
 /* media queries */
@@ -325,8 +323,6 @@ legend {
     p {
         font-size: 1.5em;
     }
-
-
 
     .index-collection-bg {
         min-height: 20em;

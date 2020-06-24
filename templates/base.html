@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Shutter | {% block page_title %}{% endblock %}</title>
-
 </head>
 
 <body>
-
+    
+    <!--Navbar-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}">Shutter</a>
@@ -81,13 +81,15 @@
                 </ul>
                 <!--Search-->
                 <form action="{% url 'search' %}" method="GET" class="form-inline nav-padding my-2 my-lg-0">
-                    <input class="form-control search-form-input mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+                    <input class="form-control search-form-input mr-sm-2" type="text" name="q" placeholder="Search"
+                        aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0 mx-1 mx-lg-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
 
+    <!--Messages-->
     {% if messages %}
     <div class="container-fluid messages">
         {% for message in messages %}
@@ -100,19 +102,18 @@
     {% block content %}
     {% endblock %}
 
+    <!--Footer-->
     <footer class="footer-bg py-3">
         <div class="container text-center">
             <p>
                 <strong>©opyright Shutter 2020</strong>
             </p>
-            <p>this web app was designed and created by              
+            <p>this web app was designed and created by
             </p>
             <p>
                 <a href="https://github.com/Seabhac-94" target="_blank">zac allen</a>
             </p>
-
         </div>
-
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

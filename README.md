@@ -5,6 +5,8 @@
 ## Description
 Shutter is an Irish company website and e-commerce store. It allows users to purchase products off of the online store,
 as well as view and apply for job vacancies in the company.
+<br>
+The full site is deployed at <a href="https://shutter-ecommerce.herokuapp.com/">Shutter</a>
 
 ### Using the site
 
@@ -40,7 +42,7 @@ viewed individually, or as a whole, depending on what the user wants.
 displayed on the site, where applicants can fill out a application form, and it will be viewed through Django admin.
 4. Add to cart/checkout - Utilizing stripe(for checkout), the user can add products to a cart, amend the quantities and
 checkout using a standard payment form.
-5. homepage messages indicating succesful registration/login/logout or purchasing information.
+5. Homepage messages indicating succesful registration/login/logout or purchasing information.
 
 #### Possible Future Features
 1. Reviews section - Allow users to post reviews on the company
@@ -217,6 +219,7 @@ window, you can follow this link to view your application.
 ##### Final steps
 
 1. Set Debug = False in settings.py
+2. Repeat all tests done on development server on Heroku platform
 
 ## Credits
 
