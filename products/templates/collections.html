@@ -3,55 +3,21 @@
 {% block page_title %}Home{% endblock %}
 
 {% block content %}
+
 <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col-12 index-bg" style="background-image:url({% static 'images/indexbg.jpeg' %});">
-            <div class="col-12 col-md-10 col-lg-8 col-xl-6 index-heading-wrapper">
-                <h1 class="index-hero-heading">
-                    Born and Bred in Ireland
-                </h1>
-                <p>
-                    Shutter is a homegrown irish company that specialises in landscaping, nature and still life
-                    photography.
-                </p>
-                <button class="btn btn-light" type="button">
-                    <a href="{% url 'collections' %}">shop now</a>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="section-spacing"></div>
-
-    <!--About Us-->
-    <div class="row justify-content-center index-section">
-        <div class="col-12 col-sm-11 col-md-10 col-xl-8 text-center">
-            <h2>
-                About Us
-            </h2>
-            <p>
-                Shutter offers a wide range of photographic services in Ireland. from our online store, product
-                photography and drone footage, we are here to suit all your needs.
-                <br>
-                Contact us today to see what we can do for you,
-                or browse our site and see what we have to offer.
-            </p>
-            <p>
-                <button class="btn btn-light">
-                    <a href="mailto:zac.allen@outlook.com" target="_blank">contact us</a>
-                </button>
-                <button class="btn btn-light">
-                    <a href="{% url 'collections' %}">explore</a>
-                </button>
-            </p>
-        </div>
-    </div>
-
-    <div class="section-spacing"></div>
 
     <!--Gallery Links-->
     <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12 col-md-11">
+        <div class="col-11">
+            <h3 class="py-4">
+                our collections
+            </h3>
+            <p>got something particular in mind?
+                <br>
+                our collections filter will help you find whatever it is you're searching for
+            </p>
+        </div>
+        <div class="col-12 col-md-11 col-lg-6">
             <div class="index-mobile-header d-block d-xl-none">
                 <div class="">
                     <h2 class="">
@@ -70,7 +36,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection">
+        <div class="col-12 col-md-11 col-lg-5 index-collection-bg index-mid-collection">
             <div class="index-mobile-header d-block d-xl-none">
                 <div class="">
                     <h2 class="">
@@ -88,7 +54,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-11 col-xl-5 index-collection-bg index-mid-collection">
+        <div class="col-12 col-md-11 col-lg-5 index-collection-bg index-mid-collection">
             <div class="index-mobile-header d-block d-xl-none">
                 <div class="">
                     <h2 class="">
@@ -106,7 +72,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-11 index-collection-bg">
+        <div class="col-12 col-md-11 col-lg-6 index-collection-bg">
             <div class="index-mobile-header d-block d-xl-none">
                 <div class="">
                     <h2 class="">
@@ -125,7 +91,5 @@
             </a>
         </div>
     </div>
-<!--Closing Page Wrapper-->
 </div>
-<!--/Closing Page Wrapper-->
 {% endblock %}

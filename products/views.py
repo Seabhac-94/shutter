@@ -4,6 +4,13 @@ from .models import Product
 # Create your views here.
 
 """
+Displays collections.html
+"""
+
+def collections(request):
+    return render(request, 'collections.html')
+
+"""
 Displays all products
 """
 def all_products(request):
