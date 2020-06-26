@@ -9,9 +9,11 @@
     <div class="container-fluid job-openings">
         <div class="section-spacing"></div>
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <h2>We're Hiring!</h2>
-                <p class="careers-para">
+            <div class="col-12 col-lg-4">
+                <img class="hiring-img" src="{% static 'images/hiring.jpg' %}" width="100%" alt="hiringphotos">
+            </div>
+            <div class="col-12 col-lg-8">
+                <p class="careers-para text-center text-md-left">
                     We're always looking to add new talent to the team, and welcome people from all walks of life.
                     If you think you're a good match for any of the jobs below, please make sure to apply and we'll get
                     back to you ASAP!
@@ -27,7 +29,7 @@
             </div>
             <div class="section-spacing"></div>
             {% for job in current_jobs %}
-            <div class="col-12 col-md-8 col-xl-6">
+            <div class="col-11 col-md-8 col-xl-6 career-info-wrap">
                 <h3 class="careers-heading">
                     {{job.job_title}}
                 </h3>

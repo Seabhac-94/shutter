@@ -227,6 +227,10 @@ legend {
     min-height: 90%;
 }
 
+img.hiring-img{
+    border-radius: 1em;
+}
+
 .job-openings {
     font-family: 'Roboto', sans-serif;
     text-transform: none;
@@ -240,6 +244,14 @@ legend {
 .careers-para {
     font-weight: 300;
     white-space: pre-line;
+}
+
+.career-info-wrap {
+    margin: 1em;
+    padding: 1em;
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color: white;
 }
 
 /* application.html */
