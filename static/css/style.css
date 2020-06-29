@@ -85,7 +85,7 @@ a:hover.nav-cart {
     padding-right: 0.5em;
 }
 
-.messages {
+.messages, #credit-card-errors {
     font-size: 1.5em;
     padding: 2em;
     background-color: rgba(186, 191, 36, 0.3);
@@ -218,6 +218,10 @@ p.help-block {
 
 legend {
     font-size: 2em;
+}
+
+#credit-card-errors {
+    margin: 2em 0;
 }
 
 /* careers.html */
