@@ -7,3 +7,4 @@ def about(request):
     renders about.html
     """
     return render(request, 'about.html')
+    

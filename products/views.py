@@ -35,3 +35,4 @@ def nature_products(request):
 def irishness_products(request):
     products = Product.objects.filter(photo_type='Irishness')
     return render(request, 'products.html', {"products":products})
+    

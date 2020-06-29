@@ -27,3 +27,4 @@ class EmailAuth:
             return None
         except User.DoesNotExist:
             return None
+            

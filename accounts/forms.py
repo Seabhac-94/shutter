@@ -42,3 +42,4 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError('Passwords must match')
 
         return password2
+        

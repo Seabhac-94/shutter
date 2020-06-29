@@ -28,3 +28,4 @@ def apply(request):
     else:
         application_form = ApplicationForm()
     return render(request, 'application.html', {'application_form':application_form})
+    
